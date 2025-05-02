@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://res.cloudinary.com/ddjsyskef/image/upload/v1746155544/public/hqzb7vmkncwmr0qfsina.png" alt="Business Card Generator"/>
+</p>
+
+
 # Business Card Generator
 
 A modern, customizable digital business card generator built with Next.js, React, TypeScript, and Tailwind CSS. Instantly create, preview, and export beautiful business cards with multiple themes and advanced UI components.
