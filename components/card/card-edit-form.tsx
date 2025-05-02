@@ -12,11 +12,14 @@ type CardEditFormProps = {
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const CardEditForm: React.FC<CardEditFormProps> = ({ cardData, handleInputChange }) => (
-  <div className="flex-1 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-    <h2 className="text-xl font-semibold mb-4 dark:text-white">Edit Your Card</h2>
-    <div className="space-y-4">
-      <div>
+const CardEditForm: React.FC<CardEditFormProps> = ({
+  cardData,
+  handleInputChange,
+}) => (
+  <div className="flex-1 p-6 rounded-lg shadow-md text-white">
+    <h2 className="text-xl font-semibold mb-4">Edit Your Card</h2>
+    <div className="space-y-6">
+      <div className="flex flex-col space-y-2">
         <Label htmlFor="name">Name</Label>
         <Input
           id="name"
@@ -26,7 +29,7 @@ const CardEditForm: React.FC<CardEditFormProps> = ({ cardData, handleInputChange
           placeholder="Your name"
         />
       </div>
-      <div>
+      <div className="flex flex-col space-y-2">
         <Label htmlFor="title">Title</Label>
         <Input
           id="title"
@@ -36,7 +39,7 @@ const CardEditForm: React.FC<CardEditFormProps> = ({ cardData, handleInputChange
           placeholder="Your job title"
         />
       </div>
-      <div>
+      <div className="flex flex-col space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
           id="email"
@@ -47,7 +50,7 @@ const CardEditForm: React.FC<CardEditFormProps> = ({ cardData, handleInputChange
           type="email"
         />
       </div>
-      <div>
+      <div className="flex flex-col space-y-2">
         <Label htmlFor="link">Website/Link</Label>
         <Input
           id="link"

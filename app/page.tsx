@@ -155,16 +155,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center p-4">
-      <h1 className="text-3xl font-bold mb-8 text-center dark:text-white">
+      <h1 className="text-3xl font-bold mb-8 text-center text-white">
         Code-Styled Business Card Generator
       </h1>
 
       <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-8">
         {/* Card Preview */}
         <div className="flex-1 flex flex-col items-center">
-          <h2 className="text-xl font-semibold mb-4 dark:text-white">
-            Preview
-          </h2>
+          <h2 className="text-xl font-semibold mb-4text-white">Preview</h2>
           <div className="perspective-1000 w-full max-w-md">
             <motion.div
               className="w-full relative preserve-3d"
@@ -192,30 +190,65 @@ export default function Home() {
                 >
                   <TooltipProvider>
                     {/* New Document */}
-                    <NewCardButton setCardData={setCardData} currentTheme={currentTheme} toast={toast} />
+                    <NewCardButton
+                      setCardData={setCardData}
+                      currentTheme={currentTheme}
+                      toast={toast}
+                    />
 
                     {/* Copy JSON */}
-                    <CopyJsonButton onCopy={copyToClipboard} currentTheme={currentTheme} />
+                    <CopyJsonButton
+                      onCopy={copyToClipboard}
+                      currentTheme={currentTheme}
+                    />
 
                     {/* Folder */}
-                    <FolderButton onClick={() => toast("Folder functionality not implemented yet.", { position: "bottom-right", duration: 2000 })} currentTheme={currentTheme} />
+                    <FolderButton
+                      onClick={() =>
+                        toast("Folder functionality not implemented yet.", {
+                          position: "bottom-right",
+                          duration: 2000,
+                        })
+                      }
+                      currentTheme={currentTheme}
+                    />
 
                     {/* Download JSON */}
-                    <DownloadJsonButton onDownload={downloadJSON} currentTheme={currentTheme} />
+                    <DownloadJsonButton
+                      onDownload={downloadJSON}
+                      currentTheme={currentTheme}
+                    />
 
                     {/* Refresh */}
-                    <RefreshButton onFlip={() => setIsFlipped(!isFlipped)} currentTheme={currentTheme} />
+                    <RefreshButton
+                      onFlip={() => setIsFlipped(!isFlipped)}
+                      currentTheme={currentTheme}
+                    />
 
                     {/* Code/Theme */}
-                    <CodeThemeButton onThemeDialogOpen={() => setThemeDialogOpen(true)} currentTheme={currentTheme} />
+                    <CodeThemeButton
+                      onThemeDialogOpen={() => setThemeDialogOpen(true)}
+                      currentTheme={currentTheme}
+                    />
 
                     <div className="flex-1"></div>
 
                     {/* Export as Image */}
-                    <ExportImageButton onExport={exportAsImage} currentTheme={currentTheme} />
+                    <ExportImageButton
+                      onExport={exportAsImage}
+                      currentTheme={currentTheme}
+                    />
 
                     {/* More options */}
-                    <MoreOptionsButton onClick={() => toast("More options functionality not implemented yet.", { position: "bottom-right", duration: 2000 })} currentTheme={currentTheme} />
+                    <MoreOptionsButton
+                      onClick={() =>
+                        toast(
+                          "More options functionality not implemented yet.",
+                          { position: "bottom-right", duration: 2000 }
+                        )
+                      }
+                      currentTheme={currentTheme}
+                    />
                   </TooltipProvider>
                 </div>
 
@@ -359,16 +392,24 @@ export default function Home() {
         </div>
 
         {/* Edit Form */}
-        <div className="flex-1 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-4 dark:text-white">
+        <div className="flex-1 bg-gray-800 p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-4 text-white">
             Edit Your Card
           </h2>
-          <CardEditForm cardData={cardData} handleInputChange={handleInputChange} />
+          <CardEditForm
+            cardData={cardData}
+            handleInputChange={handleInputChange}
+          />
         </div>
       </div>
 
       {/* Theme Dialog */}
-      <ThemeDialog open={themeDialogOpen} onOpenChange={setThemeDialogOpen} theme={theme} setTheme={setTheme} />
+      <ThemeDialog
+        open={themeDialogOpen}
+        onOpenChange={setThemeDialogOpen}
+        theme={theme}
+        setTheme={setTheme}
+      />
     </div>
   );
 }
