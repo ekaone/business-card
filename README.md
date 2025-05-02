@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Business Card Generator
+
+A modern, customizable digital business card generator built with Next.js, React, TypeScript, and Tailwind CSS. Instantly create, preview, and export beautiful business cards with multiple themes and advanced UI components.
+
+## Features
+
+- **Live Editing:** Instantly update your business card information (name, title, email, website) with a real-time preview.
+- **Theme Support:** Choose from multiple developer-inspired themes (VSCode, Monokai, Dracula, GitHub, Nord).
+- **Export Options:** Download your card as a PNG image or JSON file.
+- **Clipboard Support:** Copy card data to clipboard with a single click.
+- **Responsive Design:** Fully responsive and mobile-friendly.
+- **Modern UI:** Built with shadcn/ui, Radix UI, and Tailwind CSS for a sleek interface.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- pnpm (or npm/yarn)
 
+### Installation
 ```bash
-npm run dev
+pnpm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
+```bash
+pnpm dev
+# or
+npm run dev
+```
+Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
+```bash
+pnpm build
+pnpm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+├── app/                # Application entry, layout, and main page
+│   ├── globals.css     # Global styles (Tailwind CSS)
+│   ├── layout.tsx      # Root layout and metadata
+│   └── page.tsx        # Main business card editor UI
+├── components/         # Reusable UI and card components
+│   ├── card/           # Card-specific components (header, form, export, etc.)
+│   └── ui/             # shadcn/ui and custom UI primitives
+├── data/
+│   └── themes.ts       # Theme definitions
+├── hooks/
+│   └── use-mobile.ts   # Responsive/mobile detection hook
+├── lib/
+│   └── utils.ts        # Utility functions (e.g., class merging)
+├── public/             # Static assets (SVGs, icons)
+├── package.json        # Project metadata and dependencies
+├── next.config.ts      # Next.js configuration
+├── tsconfig.json       # TypeScript configuration
+└── README.md           # Project documentation
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
+- [Next.js 15](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [html-to-image](https://github.com/bubkoo/html-to-image)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
+Pull requests and issues are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+[MIT](https://github.com/ekaone/business-card?tab=MIT-1-ov-file#readme)
