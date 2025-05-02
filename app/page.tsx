@@ -5,40 +5,10 @@ import type React from "react";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { toPng } from "html-to-image";
-import {
-  Download,
-  ImageIcon,
-  Mail,
-  Globe,
-  FileText,
-  ClipboardCopy,
-  FolderClosed,
-  RefreshCw,
-  Code,
-  MoreHorizontal,
-} from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Mail, Globe } from "lucide-react";
+
 import toast from "react-hot-toast";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { themes } from "@/data/themes";
 import CardHeader from "../components/card/card-header";
 import NewCardButton from "../components/card/new-card-button";
@@ -267,10 +237,12 @@ export default function Home() {
                   <div className="flex">
                     <span className="text-gray-500 w-8">3</span>
                     <span className="ml-4">
-                      <span className={`${currentTheme.key}`}>"name"</span>
+                      <span className={`${currentTheme.key}`}>
+                        &quot;name&quot;
+                      </span>
                       <span className={`${currentTheme.text}`}>: </span>
                       <span className={`${currentTheme.value}`}>
-                        "{cardData.name}"
+                        &quot;{cardData.name}&quot;
                       </span>
                       <span className={`${currentTheme.text}`}>,</span>
                     </span>
@@ -278,10 +250,12 @@ export default function Home() {
                   <div className="flex">
                     <span className="text-gray-500 w-8">4</span>
                     <span className="ml-4">
-                      <span className={`${currentTheme.key}`}>"title"</span>
+                      <span className={`${currentTheme.key}`}>
+                        &quot;title&quot;
+                      </span>
                       <span className={`${currentTheme.text}`}>: </span>
                       <span className={`${currentTheme.value}`}>
-                        "{cardData.title}"
+                        &quot;{cardData.title}&quot;
                       </span>
                       <span className={`${currentTheme.text}`}>,</span>
                     </span>
@@ -289,10 +263,12 @@ export default function Home() {
                   <div className="flex">
                     <span className="text-gray-500 w-8">5</span>
                     <span className="ml-4">
-                      <span className={`${currentTheme.key}`}>"email"</span>
+                      <span className={`${currentTheme.key}`}>
+                        &quot;email&quot;
+                      </span>
                       <span className={`${currentTheme.text}`}>: </span>
                       <span className={`${currentTheme.value}`}>
-                        "{cardData.email}"
+                        &quot;{cardData.email}&quot;
                       </span>
                       <span className={`${currentTheme.text}`}>,</span>
                     </span>
@@ -300,10 +276,12 @@ export default function Home() {
                   <div className="flex">
                     <span className="text-gray-500 w-8">6</span>
                     <span className="ml-4">
-                      <span className={`${currentTheme.key}`}>"link"</span>
+                      <span className={`${currentTheme.key}`}>
+                        &quot;link&quot;
+                      </span>
                       <span className={`${currentTheme.text}`}>: </span>
                       <span className={`${currentTheme.value}`}>
-                        "{cardData.link}"
+                        &quot;{cardData.link}&quot;
                       </span>
                     </span>
                   </div>
