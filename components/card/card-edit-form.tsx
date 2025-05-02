@@ -17,7 +17,6 @@ const CardEditForm: React.FC<CardEditFormProps> = ({
   handleInputChange,
 }) => (
   <div className="flex-1 p-6 rounded-lg shadow-md text-white">
-    <h2 className="text-xl font-semibold mb-4">Edit Your Card</h2>
     <div className="space-y-6">
       <div className="flex flex-col space-y-2">
         <Label htmlFor="name">Name</Label>

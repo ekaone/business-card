@@ -1,6 +1,17 @@
 import React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
 
 type ThemeDialogProps = {
   open: boolean;
@@ -9,9 +20,14 @@ type ThemeDialogProps = {
   setTheme: (theme: string) => void;
 };
 
-const ThemeDialog: React.FC<ThemeDialogProps> = ({ open, onOpenChange, theme, setTheme }) => (
+const ThemeDialog: React.FC<ThemeDialogProps> = ({
+  open,
+  onOpenChange,
+  theme,
+  setTheme,
+}) => (
   <Dialog open={open} onOpenChange={onOpenChange}>
-    <DialogContent className="bg-white">
+    <DialogContent className="bg-gray-800 text-white">
       <DialogHeader>
         <DialogTitle>Select Theme</DialogTitle>
       </DialogHeader>
@@ -25,7 +41,7 @@ const ThemeDialog: React.FC<ThemeDialogProps> = ({ open, onOpenChange, theme, se
         <SelectTrigger>
           <SelectValue placeholder="Select a theme" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="bg-gray-800 text-white">
           <SelectItem value="vscode">VS Code</SelectItem>
           <SelectItem value="monokai">Monokai</SelectItem>
           <SelectItem value="dracula">Dracula</SelectItem>

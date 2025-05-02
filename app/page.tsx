@@ -162,7 +162,7 @@ export default function Home() {
       <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-8">
         {/* Card Preview */}
         <div className="flex-1 flex flex-col items-center">
-          <h2 className="text-xl font-semibold mb-4text-white">Preview</h2>
+          <h2 className="text-xl font-semibold mb-4 text-white">Preview</h2>
           <div className="perspective-1000 w-full max-w-md">
             <motion.div
               className="w-full relative preserve-3d"
@@ -392,14 +392,16 @@ export default function Home() {
         </div>
 
         {/* Edit Form */}
-        <div className="flex-1 bg-gray-800 p-6 rounded-lg shadow-md">
+        <div className="flex flex-col flex-1 items-center">
           <h2 className="text-xl font-semibold mb-4 text-white">
             Edit Your Card
           </h2>
-          <CardEditForm
-            cardData={cardData}
-            handleInputChange={handleInputChange}
-          />
+          <div className="flex-1 bg-gray-800 p-6 rounded-lg shadow-md">
+            <CardEditForm
+              cardData={cardData}
+              handleInputChange={handleInputChange}
+            />
+          </div>
         </div>
       </div>
 
